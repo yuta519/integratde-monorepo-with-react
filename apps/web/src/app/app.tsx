@@ -1,16 +1,21 @@
-import styled from 'styled-components';
-
+import { Route, Routes } from 'react-router-dom';
 import NxWelcome from './nx-welcome';
 
-const StyledApp = styled.div`
-  // Your style here
-`;
+function Home() {
+  return <h1>Home</h1>;
+}
+
+const Proudcts = () => {
+  return <>aaaaaaaaaaaaaaaaaa</>;
+};
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="web" />
-    </StyledApp>
+    <Routes>
+      <Route path="/" element={<NxWelcome title="web" />}></Route>
+      <Route path="/home" element={<Home />}></Route>
+      <Route path="/products" element={<Proudcts />}></Route>
+    </Routes>
   );
 }
 
