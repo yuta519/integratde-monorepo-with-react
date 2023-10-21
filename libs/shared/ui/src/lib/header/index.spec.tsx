@@ -1,11 +1,15 @@
 import { render } from '@testing-library/react';
 
 import { Header } from '.';
+import { ChakraProvider } from '@chakra-ui/react';
 
 describe('Header', () => {
   it('should render successfully', () => {
-    // const { baseElement } = render(<Header />);
-    expect(true).toBe(true);
-    // expect(baseElement).toBeTruthy();
+    const { baseElement } = render(
+      <ChakraProvider>
+        <Header />
+      </ChakraProvider>
+    );
+    expect(baseElement).toBeTruthy();
   });
 });
