@@ -15,6 +15,7 @@ export default defineConfig({
   test: {
     globals: true,
     cache: { dir: '../../../node_modules/.vitest' },
+    setupFiles: ['./setupVitest.ts'],
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
