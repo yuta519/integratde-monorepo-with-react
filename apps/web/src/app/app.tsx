@@ -1,5 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react';
 
+import { Header } from '@integratde-monorepo-with-react/shared-ui';
 import NxWelcome from './nx-welcome';
 
 function Home() {
@@ -12,11 +14,14 @@ const Proudcts = () => {
 
 export function App() {
   return (
-    <Routes>
-      <Route path="/" element={<NxWelcome title="web" />}></Route>
-      <Route path="/home" element={<Home />}></Route>
-      <Route path="/products" element={<Proudcts />}></Route>
-    </Routes>
+    <ChakraProvider>
+      <Header />
+      <Routes>
+        <Route path="/" element={<NxWelcome title="web" />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/products" element={<Proudcts />}></Route>
+      </Routes>
+    </ChakraProvider>
   );
 }
 
