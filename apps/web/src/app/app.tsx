@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 
 import { Header } from '@integratde-monorepo-with-react/shared-ui';
+import { adapters } from '@integratde-monorepo-with-react/adapters';
 import NxWelcome from './nx-welcome';
 
 function Home() {
@@ -13,6 +14,7 @@ const Proudcts = () => {
 };
 
 export function App() {
+  adapters();
   return (
     <ChakraProvider>
       <Header />
