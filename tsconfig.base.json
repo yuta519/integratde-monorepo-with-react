@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@integratde-monorepo-with-react/adapters": [
+        "libs/adapters/src/index.ts"
+      ],
       "@integratde-monorepo-with-react/shared-ui": [
         "libs/shared/ui/src/index.ts"
       ]
